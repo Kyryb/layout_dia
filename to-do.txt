@@ -1,0 +1,4 @@
+1. Line height in percentages.
+2. Grid for services.
+3. Text placeholders think about changing to font-size, font-weight and font only.
+4. Think about tablet container paddings.

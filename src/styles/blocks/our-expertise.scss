@@ -1,0 +1,87 @@
+.our-expertise {
+  background-color: $white-color;
+  border-radius: 30px;
+  padding: 72px 0;
+
+  @include onTablet {
+    padding: 128px 0;
+  }
+
+  @include onSmallScreen {
+    padding-bottom: 134px;
+  }
+
+  &__title {
+    @extend %h2-text-44fs-53lh;
+    color: $black-color;
+    text-align: center;
+
+    margin-bottom: 56px;
+
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+
+    @include onTablet {
+      gap: 72px;
+    }
+
+    @include onSmallScreen {
+      gap: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include onTablet {
+      max-width: 362px;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include onSmallScreen {
+      max-width: 214px;
+    }
+
+    @include onLargeScreen {
+      max-width: 264px;
+    }
+
+    &-image {
+      border-radius: 16px;
+      margin-bottom: 32px;
+
+      @include onSmallScreen {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-title {
+      font: 600 20px/28px $main-font;
+      color: $black-color;
+
+      margin-bottom: 16px;
+    }
+
+    &-description {
+      @extend %text-14fs-21lh; 
+      text-align: center;
+    }
+  }
+}

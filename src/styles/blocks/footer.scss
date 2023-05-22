@@ -1,0 +1,36 @@
+.footer {
+  background-color: $black-background-color;
+  padding: 72px 0 80px;
+
+  @include onTablet {
+    padding-top: 180px;
+  }
+
+  &__contact-us {
+    margin-bottom: 80px;
+
+    @include onTablet {
+      margin-bottom: 140px;
+    }
+  
+    @include onSmallScreen {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include onTablet {
+      gap: 24px;
+    }
+
+    @include onSmallScreen {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

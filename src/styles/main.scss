@@ -1,7 +1,20 @@
 @import "utils";
-@import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
-}
+@import "blocks/page.scss";
+@import "blocks/button.scss";
+@import "blocks/icon.scss";
+@import "blocks/container.scss";
+@import "blocks/grid.scss";
+@import "blocks/logo.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/menu.scss";
+@import "blocks/slider.scss";
+@import "blocks/about-us.scss";
+@import "blocks/our-expertise.scss";
+@import "blocks/services.scss";
+@import "blocks/testimonials.scss";
+@import "blocks/tagline.scss";
+@import "blocks/footer.scss";
+@import "blocks/contact-us.scss";

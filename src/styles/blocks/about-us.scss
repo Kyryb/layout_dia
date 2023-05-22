@@ -1,0 +1,28 @@
+.about-us {
+  
+  &__content {
+    max-width: 716px;
+    margin: 0 auto;
+
+    @include onLargeScreen {
+      max-width: 754px;
+    }
+  }
+
+  &__title {
+    @extend %h2-text-32fs-48lh;
+    color: $black-color;
+    text-align: center;
+
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__info {
+    @extend %text-22fs-33lh;
+    text-align: center;
+  }
+}

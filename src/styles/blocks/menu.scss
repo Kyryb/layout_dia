@@ -1,0 +1,26 @@
+.menu {
+  height: 100vh;
+  background-color: $black-background-color;
+
+  @include onSmallScreen {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    margin-bottom: 30vh;
+  }
+
+  &__close-menu {
+    display: block;
+
+    height: 18px;
+    width: 18px;
+    background-image: url(../images/features/Cross.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

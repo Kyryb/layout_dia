@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  background-color: $blue-color;
+
+  font: 600 15px/22px $main-font;
+  text-decoration: none;
+  color: $white-color;
+  cursor: pointer;
+
+  @include onTablet {
+    width: 264px;
+  }
+}

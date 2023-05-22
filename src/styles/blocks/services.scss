@@ -1,0 +1,147 @@
+.services {
+  
+  @include onSmallScreen {
+    $process-card-height: 264px;
+    padding-top: $process-card-height / 2;
+  }
+
+  &__short-info {
+    margin-bottom: 48px;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+      margin-bottom: 56px;
+    }
+
+    @include onSmallScreen {
+      grid-column: 1 / 5;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @extend %h4-text-13fs-20lh;
+    color: $grey-color;
+
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font: 600 32px/42px $main-font;
+    color: $black-color;
+
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    @extend %text-14fs-21lh;
+    margin-bottom: 1.5em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__process-card {
+    background-color: $white-color;
+    border-radius: 16px;
+    padding: 32px 0 32px 32px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include onTablet {
+      margin-bottom: 30px;
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+      
+      &:nth-child(2n) {
+        grid-column: 1 / 4;
+      }
+
+      &:nth-child(2n+1) {
+        grid-column: 4 / 7;
+        transform: translateY(-50%);
+      }
+
+    }
+
+    @include onSmallScreen {
+      margin-bottom: 20px;
+
+      &:nth-child(2n) {
+        grid-column: 7 / 10;
+      }
+
+      &:nth-child(2n + 1) {
+        grid-column: 10 / 13;
+      }
+    }
+
+    @include onLargeScreen {
+      margin-bottom: 30px;
+    }
+
+    &-number {
+      display: inline-block;
+      padding: 2px 0;
+      margin-bottom: 24px;
+      width: 46px;
+      
+      border-radius: 23px;
+      background-color: rgba($blue-color, 0.1);
+
+      color: $blue-color;
+      font: 600 13px/20px $main-font;
+      text-align: center;
+    }
+
+    &-list {
+      margin-bottom: 32px;
+
+      &-item {
+        @extend %bold-text-13px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      text-decoration: none;
+      color: $black-color-2;
+      font: 600 15px/22px $main-font;
+
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: $blue-color;
+        
+        & button {
+          transform: scale(1.2);
+        }
+      }
+    }
+    
+    &-arrow {
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+
+      border-radius: 50%;
+      border: none;
+
+      background-color: $blue-color;
+      background-image: url("../images/features/Vector.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

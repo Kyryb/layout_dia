@@ -1,0 +1,137 @@
+.testimonials {
+
+  &__title {
+    font: 700 13px/20px $main-font;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $grey-color;
+
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font: 600 32px/48px $main-font;
+    color: $black-color;
+
+    margin-bottom: 48px;
+
+    @include onTablet {
+      max-width: 200px;
+      margin-bottom: 56px;
+    }
+
+    @include onSmallScreen {
+      margin-bottom: 85px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include onTablet {
+      gap: 30px;
+    }
+
+    @include onSmallScreen {
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    @include onLargeScreen {
+      gap: 30px;
+    }
+  }
+
+  &__testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 32px 37px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 9px 18px rgba(37, 41, 49, 0.03);
+
+    @include onTablet {
+      padding: 32px 98px;
+    }
+
+    @include onSmallScreen {
+      padding: 32px 43px;
+      min-width: 292px;
+    }
+
+    @include onLargeScreen {
+      padding: 32px 56px;
+    }
+
+    &-photo {
+      width: 196px;
+      height: 196px;
+      
+      margin-bottom: 27px;
+
+      @include onTablet {
+        height: 250px;
+        width: 250px;
+      }
+
+      @include onSmallScreen {
+        width: 196px;
+        height: 196px;
+      }
+
+      @include onLargeScreen {
+        height: 250px;
+        width: 250px;
+      }
+    }
+
+    &-quotes {
+      height: 19px;
+      width: 21px;
+
+      background-image: url(../images/testimonials/quote.svg);
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      margin-bottom: 10px;
+
+      @include onTablet {
+        margin-bottom: 18px;
+      }
+
+      @include onSmallScreen {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-description {
+      @extend %bold-text-13px;
+      text-align: center;
+      margin-bottom: 16px;
+
+      @include onSmallScreen {
+        max-width: 250px;
+      }
+
+    }
+
+    &-name {
+      @extend %bold-text-13px;
+      color: $black-color;
+      margin-bottom: 4px;
+      margin-top: auto;
+      text-align: center;
+    }
+
+    &-role {
+      @extend %h4-text-styles;
+      color: $grey-color;
+      text-align: center;
+    }
+  }
+}

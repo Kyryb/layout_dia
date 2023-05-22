@@ -1,0 +1,43 @@
+.tagline {
+  padding: 72px 0;
+  background-image: url(../images/Shapes.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+
+  @include onTablet {
+    padding: 200px 0;
+  }
+
+  &__title {
+    font: 600 44px/53px $main-font;
+    text-align: center;
+    color: $black-color;
+
+    margin-bottom: 24px;
+
+    @include onTablet {
+      font: 600 52px/62px $main-font;
+    }
+
+    @include onSmallScreen {
+      line-height: 78px;
+    }
+  }
+
+  &__about {
+    @extend %bold-text-22-24px;
+    max-width: 754px;
+    text-align: center;
+
+    margin: 0 auto 56px;
+
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__apply {
+    margin: 0 auto;
+  }
+}

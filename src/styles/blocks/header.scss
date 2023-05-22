@@ -1,0 +1,153 @@
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $black-background-color;
+  border-radius: 0 0 30px 30px;
+
+  @include onTablet {
+    justify-content: space-between;
+  }
+  
+  @include onSmallScreen {
+    position: relative;
+    display: block;
+    height: 800px;
+  }
+
+  &__info-wrapper {
+    padding-top: 18px;
+    margin-bottom: 48px;
+
+    @include onSmallScreen {
+      padding-top: 48px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+
+    @include onTablet {
+      margin-bottom: 56px;
+    }
+
+    @include onSmallScreen {
+      justify-content: space-between;
+      margin-bottom: 164px;
+    }
+  }
+
+  &__menu-opener {
+    display: block;
+    margin-left: 36px;
+
+    height: 8px;
+    width: 18px;
+    background-image: url(../images/features/Vector.png);
+
+    @include onSmallScreen {
+      display: none;
+    }
+  }
+
+  &__hire-us-link {
+    @extend %h4-text-styles;
+    color: $white-color;
+    text-decoration: none;
+
+    margin-left: auto;
+
+    transition: transform 0.5s ease-in-out;
+    
+    @include onSmallScreen {
+      margin: 0;
+      position: relative;
+    }
+
+    &::after {
+      display: block;
+      margin-top: 8px;
+
+      content: "";
+      height: 2px;
+      width: 100%;
+      border-radius: 4px;
+      background-color: $blue-color;
+
+      @include onSmallScreen {
+        position: absolute;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    font: 600 52px/62px $main-font;
+    letter-spacing: -2px;
+    color: $white-color;
+
+    margin-bottom: 32px;
+
+    @include onTablet {
+      margin-bottom: 24px;
+
+      font-size: 64px;
+      line-height: 68px;
+    }
+
+    @include onSmallScreen {
+      max-width: 362px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__about {
+    font: 400 18px/27px $secondary-font;
+    color: $white-color;
+
+    margin-bottom: 72px;
+
+    @include onTablet {
+      max-width: 362px;
+      margin-bottom: 56px;
+    }
+
+    @include onSmallScreen {
+      margin-bottom: 84px;
+    }
+  }
+
+  &__learn-more {
+    height: 50px;
+  }
+
+  &__slider {
+    flex-grow: 1;
+    min-height: 148px;
+
+    @include onTablet {
+      flex-grow: 0;
+    }
+
+    @include onSmallScreen {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      top: 120px;
+    }
+
+    @include onLargeScreen {
+      left: 55%;
+    }
+  }
+}

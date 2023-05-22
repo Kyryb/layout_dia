@@ -1,0 +1,18 @@
+.icon {
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--fb {
+    background-image: url(../images/icons/fb-icon.svg);
+  }
+
+  &--tw {
+    background-image: url(../images/icons/tw-icon.svg);
+  }
+
+  &--ig {
+    background-image: url(../images/icons/ig-icon.svg);
+  }
+}

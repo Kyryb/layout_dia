@@ -1,4 +1,59 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%h2-text-32fs-48lh {
+  font: 600 32px/48px $main-font;
+}
+
+%h2-text-44fs-53lh {
+  font: 600 44px/53px $main-font;
+
+  @include onTablet {
+    font-size: 52px;
+    line-height: 78px;
+  }
+}
+
+%h4-text-13fs-20lh {
+  font: 700 13px/20px $main-font;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+%text-22fs-33lh {
+  font: 600 22px/33px $secondary-font;
+  color: $text-main-color;
+
+  @include onTablet {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+%text-14fs-21lh {
+  font: 400 14px/21px $secondary-font;
+  color: $text-main-color;
+}
+
+%bold-text-13px {
+  font: 600 13px/20px $secondary-font;
+  color: $text-main-color;
+}
+
+%default-text-14px {
+  font: 400 14px/21px $secondary-font;
+  color: $text-main-color;
+}
+
+%bold-text-22-24px {
+  font: 600 22px/33px $secondary-font;
+  color: $text-main-color;
+  
+  @include onTablet {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+%h4-text-styles {
+  font: 700 13px/20px $main-font;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }

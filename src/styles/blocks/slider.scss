@@ -1,0 +1,63 @@
+.slider {
+
+  &__container {
+    height: 100%;
+  }
+
+  &__image {
+    display: block;
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+
+    @include onSmallScreen {
+      border-radius: 30px 0;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+    left: 20px;
+    width: 280px;
+
+    @include onTablet {
+      left: 40px;
+      bottom: 32px;
+    }
+  }
+
+  &__arrow-container {
+    margin-bottom: 16px;
+  }
+
+  &__arrow {
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: $white-color;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    
+    font: 700 13px/20px $main-font;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__subtitle {
+    font: 400 14px/20px $secondary-font;
+    color: $white-color;
+  }
+
+  &__wrap {
+    position: relative;
+    height: 100%;
+  }
+}
